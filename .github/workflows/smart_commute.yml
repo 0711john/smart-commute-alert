@@ -1,0 +1,45 @@
+name: Smart Commute Alert
+
+on:
+
+  # 手動執行
+  workflow_dispatch:
+
+  # 每週一～週五
+  # 台灣時間上午 7:00
+  # GitHub Actions 使用 UTC
+  schedule:
+    - cron: "0 23 * * 0-4"
+
+
+jobs:
+
+  run-smart-commute:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 下載 Repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 設定 Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 安裝 requests
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      # 執行 Python 程式
+      - name: Run smart commute alert
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python smart_commute.py
