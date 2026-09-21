@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>智慧通勤風險通知系統</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <header class="navbar">
+
+        <div class="logo">
+            🚦 智慧通勤
+        </div>
+
+        <nav>
+            <a href="#news">最新消息</a>
+            <a href="#charts">數據圖表</a>
+        </nav>
+
+    </header>
+
+
+    <!-- 首頁 -->
+    <main>
+
+        <section class="hero">
+
+            <div>
+
+                <p class="tag">
+                    SMART COMMUTE ALERT
+                </p>
+
+                <h1>
+                    智慧通勤<br>
+                    風險通知系統
+                </h1>
+
+                <p>
+                    即時掌握天氣與空氣品質，
+                    提供更便利的通勤資訊。
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 最新消息 -->
+        <section id="news" class="section">
+
+            <div class="section-title">
+
+                <span>01</span>
+
+                <div>
+                    <h2>最新消息</h2>
+                    <p>今日通勤環境資訊</p>
+                </div>
+
+            </div>
+
+
+            <div class="news-grid">
+
+                <!-- 最高溫 -->
+                <div class="info-card">
+
+                    <div class="icon">
+                        🌡️
+                    </div>
+
+                    <p>最高溫度</p>
+
+                    <h3 id="temperature">
+                        -- °C
+                    </h3>
+
+                    <span>
+                        今日預測
+                    </span>
+
+                </div>
+
+
+                <!-- 降雨 -->
+                <div class="info-card">
+
+                    <div class="icon">
+                        🌧️
+                    </div>
+
+                    <p>最高降雨機率</p>
+
+                    <h3 id="rain">
+                        -- %
+                    </h3>
+
+                    <span>
+                        今日預測
+                    </span>
+
+                </div>
+
+
+                <!-- AQI -->
+                <div class="info-card">
+
+                    <div class="icon">
+                        🌫️
+                    </div>
+
+                    <p>空氣品質 AQI</p>
+
+                    <h3 id="aqi">
+                        --
+                    </h3>
+
+                    <span>
+                        今日預測
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 通勤建議 -->
+
+            <div class="alert-box">
+
+                <div>
+                    <span class="alert-title">
+                        今日通勤建議
+                    </span>
+
+                    <p id="advice">
+                        正在取得最新資料……
+                    </p>
+                </div>
+
+            </div>
+
+
+            <p class="update-time">
+                最後更新：
+                <span id="updateTime">
+                    尚未更新
+                </span>
+            </p>
+
+        </section>
+
+
+        <!-- 圖表 -->
+        <section id="charts" class="section chart-section">
+
+            <div class="section-title">
+
+                <span>02</span>
+
+                <div>
+                    <h2>數據圖表</h2>
+                    <p>未來可連接 MySQL 資料庫</p>
+                </div>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <h3>
+                    每日通勤風險趨勢
+                </h3>
+
+                <p class="chart-description">
+                    目前使用示範資料，未來可由 MySQL
+                    提供歷史天氣與 AQI 資料。
+                </p>
+
+                <div class="chart">
+
+                    <div class="bar">
+                        <span>一</span>
+                        <div class="bar-fill"
+                             style="height: 45%;">
+                        </div>
+                    </div>
+
+                    <div class="bar">
+                        <span>二</span>
+                        <div class="bar-fill"
+                             style="height: 60%;">
+                        </div>
+                    </div>
+
+                    <div class="bar">
+                        <span>三</span>
+                        <div class="bar-fill"
+                             style="height: 35%;">
+                        </div>
+                    </div>
+
+                    <div class="bar">
+                        <span>四</span>
+                        <div class="bar-fill"
+                             style="height: 75%;">
+                        </div>
+                    </div>
+
+                    <div class="bar">
+                        <span>五</span>
+                        <div class="bar-fill"
+                             style="height: 55%;">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="chart-note">
+
+                    📊 示範資料
+
+                </div>
+
+            </div>
+
+
+            <!-- MySQL 預留區 -->
+
+            <div class="database-card">
+
+                <div class="database-icon">
+                    🗄️
+                </div>
+
+                <div>
+
+                    <h3>
+                        未來 MySQL 資料庫
+                    </h3>
+
+                    <p>
+                        未來可將每日天氣、降雨機率、
+                        AQI 與通勤風險資料儲存至 MySQL，
+                        再透過後端 API 傳送至本網站，
+                        自動產生歷史趨勢圖表。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- 頁尾 -->
+
+    <footer>
+
+        <p>
+            © 2026 Smart Commute Alert
+        </p>
+
+        <p>
+            智慧通勤風險通知系統
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
