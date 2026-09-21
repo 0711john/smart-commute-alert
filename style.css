@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #172033;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.navbar nav a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef4ff 0%,
+            #ffffff 60%
+        );
+}
+
+.hero > div {
+    max-width: 760px;
+}
+
+.tag {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.15;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.hero p:not(.tag) {
+    max-width: 600px;
+
+    font-size: 18px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   Section
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 7%;
+}
+
+.section-title {
+    display: flex;
+
+    gap: 18px;
+
+    align-items: flex-start;
+
+    margin-bottom: 40px;
+}
+
+.section-title > span {
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.section-title h2 {
+    font-size: 36px;
+
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #64748b;
+}
+
+
+/* =========================
+   最新消息
+========================= */
+
+.news-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.info-card {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.05);
+
+    transition: transform 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 35px;
+
+    margin-bottom: 18px;
+}
+
+.info-card p {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+.info-card h3 {
+    font-size: 38px;
+
+    margin: 8px 0;
+}
+
+.info-card span {
+    font-size: 13px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================
+   通勤提醒
+========================= */
+
+.alert-box {
+    margin-top: 25px;
+
+    padding: 25px 30px;
+
+    border-radius: 18px;
+
+    background: #172033;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.alert-title {
+    font-size: 14px;
+
+    font-weight: 800;
+
+    color: #93c5fd;
+}
+
+.alert-box p {
+    margin-top: 5px;
+
+    font-size: 18px;
+}
+
+.update-time {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================
+   圖表
+========================= */
+
+.chart-section {
+    padding-top: 40px;
+}
+
+.chart-card {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.05);
+}
+
+.chart-card h3 {
+    font-size: 22px;
+}
+
+.chart-description {
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   示範圖表
+========================= */
+
+.chart {
+    height: 300px;
+
+    margin-top: 35px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    gap: 25px;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #dbe2ea;
+}
+
+.bar {
+    height: 100%;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.bar-fill {
+    width: 65%;
+
+    min-height: 20px;
+
+    border-radius:
+        10px 10px 0 0;
+
+    background: #2563eb;
+
+    transition: 0.3s;
+}
+
+.bar-fill:hover {
+    background: #1d4ed8;
+}
+
+.bar span {
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   示範資料
+========================= */
+
+.chart-note {
+    margin-top: 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MySQL 區域
+========================= */
+
+.database-card {
+    margin-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: #eef4ff;
+
+    border: 1px solid #dbeafe;
+}
+
+.database-icon {
+    font-size: 45px;
+}
+
+.database-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 21px;
+}
+
+.database-card p {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    padding: 35px 7%;
+
+    background: #172033;
+
+    color: #94a3b8;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RWD：平板
+========================= */
+
+@media (max-width: 900px) {
+
+    .news-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+}
+
+
+/* =========================
+   RWD：手機
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 6%;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .navbar nav {
+        gap: 20px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+
+    .hero {
+        min-height: 400px;
+
+        padding:
+            60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero p:not(.tag) {
+        font-size: 16px;
+    }
+
+
+    .section {
+        padding:
+            65px 6%;
+    }
+
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-card h3 {
+        font-size: 34px;
+    }
+
+
+    .chart-card {
+        padding: 22px;
+    }
+
+
+    .chart {
+        height: 230px;
+
+        gap: 8px;
+
+        padding:
+            10px 0;
+    }
+
+
+    .bar-fill {
+        width: 75%;
+    }
+
+
+    .database-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding:
+            30px 6%;
+    }
+
+}
